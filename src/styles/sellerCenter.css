@@ -1,0 +1,36 @@
+/* Whole page layout */
+body{
+    margin: 0;
+    padding: 0;
+}
+.sellerCenter-container {
+  display: flex; /* instead of flex */
+  background: #f9fafb;
+  /* border: 2px solid red; */
+  min-height: 100vh;
+}
+
+/* Main content area */
+.sellerCenter-main {
+    display: flex;
+    flex-direction: column;
+  flex: 1;
+  margin-left: 250px; /* 👈 match sidebar width */
+  /* padding: 20px; */
+  background: #f9fafb;
+  /* min-height: 100vh; */
+  transition: margin-left 0.3s ease;
+  /* border: 2px solid red; */
+}
+
+/* Wrapper for dashboard */
+.dashboard-wrapper {
+  margin-top: 30px;
+  background: white;
+  width: 93%;
+
+  /* border: 2px solid #00c3ff; */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}

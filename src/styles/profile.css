@@ -1,0 +1,47 @@
+/* src/styles/profile.css */
+.whole {
+     width: 100%;
+    /* border: 2px solid red; */
+}
+.profile-card {
+  text-align: center;
+  width: 400px;
+  height: 80%;
+  margin: auto;
+  margin-top: 20px;
+
+  /* margin-left: 35%; */
+  /* padding: 40px; */
+  
+  border: 2px solid red ;
+  border-radius: 10px;
+}
+
+.profile  {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00c3ff;
+  margin-top: 50px;
+}
+
+.logout {
+  border: 1px solid #ff4d4d;
+  color: black;
+  background: transparent;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: #ff4d4d;
+  color: white;
+}
+.user {
+    color: #ff4d4d;
+    /* margin-top: 0px;
+    margin-left: 0;
+    text-align: center; */
+}

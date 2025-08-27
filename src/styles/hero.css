@@ -1,0 +1,92 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease-in-out;
+}
+
+/* Animation for right-to-left movement */
+.hero-slide.right .hero-image {
+  animation: slideRight 1s forwards;
+}
+.hero-slide.left .hero-image {
+  animation: slideLeft 1s forwards;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Overlay text */
+.hero-overlay {
+  font-style: bold;
+  font-size: 22px;
+  font-weight: 10px;
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  text-align: center;
+  width: 500px;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.808);
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: black;
+  /* text-shadow: 0px 2px 5px rgba(0,0,0,0.5); */
+}
+
+/* Navigation buttons */
+.hero-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  display: none; /* hidden by default */
+}
+
+.hero-btn.left {
+  left: 20px;
+}
+.hero-btn.right {
+  right: 20px;
+}
+
+/* Show buttons on hover */
+.hero-container:hover .hero-btn {
+  display: block;
+}

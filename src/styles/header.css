@@ -1,0 +1,147 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #001524;
+  /* padding: 10px 30px; */
+
+  color: white;
+  font-family: Arial, sans-serif;
+  height: 80px;
+  width: 100%;
+}
+
+/* Logo clickable */
+.logo {
+
+  /* font-size: 26px;*/
+   font-weight: bold; 
+  /* color: #f4d58d; */
+  /* text-decoration: none;  */
+}
+
+/* Navigation items */
+.navitems {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.navitems li a {
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-btn {
+  color: white;
+}
+.nav-btn:hover {
+  color: #fb6107;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+}
+.search-bar input {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.search-btn {
+  background-color: #e34a35;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+.search-btn:hover {
+  background-color: #e34935b9;
+}
+
+/* Auth buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  /* border: 2px solid red; */
+}
+
+/* General Button Styling */
+.btn {
+  padding: 6px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Login button */
+.login-btn {
+  border: 1px solid #e34a35;
+  color: white;
+}
+.login-btn:hover {
+  background-color: #e34a35;
+  color: black;
+}
+
+/* Sign Up button */
+.signup-btn {
+  background-color: #e34a35;
+  color: black;
+  border: none;
+  font-weight: bold;
+}
+.signup-btn:hover {
+  background-color: #e34a35;
+  color: white;
+}
+
+
+/* Profile image circle */
+.profile-avatar {
+
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  /* border: 2px solid #e34a35; */
+
+  /* Prevent blur on high-DPI screens */
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+
+  /* Ensure sharpness on scaling */
+  transform: translateZ(0);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout-btn {
+  border: 1px solid #ff9e00;
+  color: white;
+  background: transparent;
+}
+.logout-btn:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+.cart-icon {
+  margin: 0 15px;
+  transition: transform 0.2s ease;
+}
+.cart-icon:hover {
+  transform: scale(1.2);
+}

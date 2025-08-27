@@ -1,0 +1,137 @@
+/* .page {
+  border: 2px solid red ;
+}
+.categories {
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+} 
+.category-card {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.product-grid {
+  border: 2px solid orangered;
+  display: flex;
+}
+
+.category-card:hover {
+  transform: translateY(10px, -5px);
+} */
+
+
+
+
+.page {
+  /* border: 2px solid green ; */
+  /* display: flex;
+  flex-direction: column; */
+  width: 100%;
+}
+h2 {
+  margin-left: 38%;
+}
+.product-grid {
+  /* background-color: #dc2f02; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; 
+  /* padding: 10px; */
+  justify-items: center; /* center items inside each grid cell */
+}
+
+/* Product Card styling */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  /* padding: 45px; */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  max-width: 300px;
+  width: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: white;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  background: #e34a35;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+  background: #fb6107;
+}
+
+/* .product-grid {
+
+  border: 2px solid brown;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.product-card {
+  width: 90%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.img {
+  border: 2px solid red;
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  padding: 10px;
+} */
