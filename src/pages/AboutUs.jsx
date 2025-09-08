@@ -8,7 +8,7 @@ const AboutUs = () => {
     <div className="about-container">
         <Header/>
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero" >
         <h1>About Us</h1>
         <p>
           Welcome to <span className="brand">ShopEase</span>, your one-stop
