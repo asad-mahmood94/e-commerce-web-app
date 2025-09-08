@@ -150,6 +150,7 @@ export default function Login() {
 
       if (data.success && data.token) {
         login(data.token); // ✅ only store token, user will be fetched inside AuthContext
+        // sessionStorage.setItem('userData' , data.user);
         alert("Login successful!");
         window.location.href = "/";
       } else {

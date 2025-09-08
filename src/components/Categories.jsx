@@ -5,7 +5,7 @@ import "../styles/categories.css";
 function ProductCard({ image, title, description, onClick }) {
   
   return (
-    <div className="product-card" onClick={onClick} style={{ cursor: "pointer", backgroundColor: "#001524", padding: "50px" }}>
+    <div className="product-card" onClick={onClick} style={{ cursor: "pointer", backgroundColor: "#e34a35", padding: "50px" }}>
       <img src={image} alt={title} className="img" style={{ height: "300px", width: "300px"}} />
       <h3>{title}</h3>
       <p>{description}</p>

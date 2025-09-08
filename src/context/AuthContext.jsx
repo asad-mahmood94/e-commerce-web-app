@@ -111,6 +111,73 @@
 
 
 
+// // src/context/AuthContext.jsx
+// import React, { createContext, useContext, useState, useEffect } from "react";
+
+// const AuthContext = createContext();
+
+// export const AuthProvider = ({ children }) => {
+//   const [user, setUser] = useState(null);
+//   const [token, setToken] = useState(null);
+//   const [loading, setLoading] = useState(true); // prevent flicker
+
+//   // ✅ Load token from sessionStorage and fetch user from backend
+//   useEffect(() => {
+//     const storedToken = sessionStorage.getItem("token");
+//     if (storedToken) {
+//       setToken(storedToken);
+//       fetchUser(storedToken);
+//     } else {
+//       setLoading(false);
+//     }
+//   }, []);
+
+//   // ✅ Function to fetch user using token
+//   const fetchUser = async (jwtToken) => {
+//     try {
+//       const res = await fetch("http://localhost:5000/api/auth/me", {
+//         method: "GET",
+//         headers: { Authorization: `Bearer ${jwtToken}` },
+//       });
+//       const data = await res.json();
+
+//       if (data.success) {
+//         setUser(data.user);
+//       } else {
+//         logout();
+//       }
+//     } catch (err) {
+//       console.error("❌ Error fetching user:", err);
+//       logout();
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   // ✅ Login function (save only token in storage)
+//   const login = (jwtToken) => {
+//     setToken(jwtToken);
+//     sessionStorage.setItem("token", jwtToken);
+//     fetchUser(jwtToken);
+//   };
+
+//   // ✅ Logout function
+//   const logout = () => {
+//     setUser(null);
+//     setToken(null);
+//     sessionStorage.removeItem("token");
+//   };
+
+//   return (
+//     <AuthContext.Provider value={{user, token, login, logout, loading }}>
+//       {children}
+//     </AuthContext.Provider>
+//   );
+// };
+
+// export const useAuth = () => useContext(AuthContext);
+
+
 // src/context/AuthContext.jsx
 import React, { createContext, useContext, useState, useEffect } from "react";
 
@@ -119,9 +186,9 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
-  const [loading, setLoading] = useState(true); // prevent flicker
+  const [loading, setLoading] = useState(true);
 
-  // ✅ Load token from sessionStorage and fetch user from backend
+  // Load token from sessionStorage and fetch user
   useEffect(() => {
     const storedToken = sessionStorage.getItem("token");
     if (storedToken) {
@@ -132,7 +199,6 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  // ✅ Function to fetch user using token
   const fetchUser = async (jwtToken) => {
     try {
       const res = await fetch("http://localhost:5000/api/auth/me", {
@@ -142,6 +208,7 @@ export const AuthProvider = ({ children }) => {
       const data = await res.json();
 
       if (data.success) {
+        // ✅ user will look like { id, email, isAdmin }
         setUser(data.user);
       } else {
         logout();
@@ -154,14 +221,12 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // ✅ Login function (save only token in storage)
   const login = (jwtToken) => {
     setToken(jwtToken);
     sessionStorage.setItem("token", jwtToken);
     fetchUser(jwtToken);
   };
 
-  // ✅ Logout function
   const logout = () => {
     setUser(null);
     setToken(null);
@@ -176,6 +241,7 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+
 
 
 

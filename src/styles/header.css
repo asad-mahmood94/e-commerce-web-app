@@ -3,13 +3,19 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #001524;
+  background-color: #001524e3;
+  border-radius: 50px;
   /* padding: 10px 30px; */
 
   color: white;
   font-family: Arial, sans-serif;
-  height: 80px;
+  height: 90px;
   width: 100%;
+  position: fixed;   /* Keeps it fixed in place */
+  top: 0;            /* Sticks to the very top */
+  left: 0;           /* Aligns with the left edge */
+  /* width: 100%;      */
+  z-index: 1000; 
 }
 
 /* Logo clickable */
@@ -144,4 +150,30 @@
 }
 .cart-icon:hover {
   transform: scale(1.2);
+}
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 400px;
+  background: #001524;
+  border: 2px solid #e34a35;
+  border-radius: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0 0;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search-item:hover {
+  background: #e34a35;
 }

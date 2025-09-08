@@ -134,6 +134,9 @@ import Cart from "./pages/Cart.jsx";
 import OrderHistory from "./pages/OrderHistory.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import Order from "./pages/Order.jsx";
+import Messages from "./pages/Messages.jsx";
+import Products from "./pages/Products.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 
 
 export default function App() {
@@ -152,7 +155,6 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-
         {/* Protected profile route */}
         <Route
           path="/profile"
@@ -162,7 +164,6 @@ export default function App() {
             </ProtectedRoute>
           }
         />
-
         {/* Admin-only route */}
         <Route
           path="/sellerCenter"
@@ -176,7 +177,7 @@ export default function App() {
         {/* Other routes */}
         <Route path="/categories" element={<Categories />} />
         <Route path="/category/:category" element={<CategoryProducts />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/productDetails/:id" element={<ProductDetails />} />
         <Route path="/listing" element={<Listing />} />
         <Route path="/hero-images"
          element={
@@ -189,6 +190,9 @@ export default function App() {
         <Route path="/order-history" element={<OrderHistory />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/orders" element={<Order />} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about"    element={<AboutUs />} />
         
       </Routes>
     </BrowserRouter>

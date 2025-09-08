@@ -357,6 +357,7 @@ export default function Listing() {
                     <option value="Electronics">Electronics</option>
                     <option value="Fashion">Fashion</option>
                     <option value="Home Decor">Home Decor</option>
+                    <option value="Popular products">Popular products</option>
                 </select>
 
                 <input

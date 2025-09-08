@@ -33,6 +33,10 @@
   /* display: flex;
   flex-direction: column; */
   width: 100%;
+  background-color: white;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  /* border: 3px solid red; */
 }
 h2 {
   margin-left: 38%;
@@ -49,7 +53,7 @@ h2 {
 /* Product Card styling */
 .product-card {
   background: white;
-  border-radius: 12px;
+  border-radius: 0px;
   /* padding: 45px; */
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -83,17 +87,18 @@ h2 {
 }
 
 .product-card button {
-  background: #e34a35;
+  background: black;
   color: white;
   border: none;
   padding: 8px 14px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .product-card button:hover {
-  background: #fb6107;
+  background: #ff821c;
+  border: 1px solid white;
 }
 
 /* .product-grid {

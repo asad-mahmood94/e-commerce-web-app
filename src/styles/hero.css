@@ -1,8 +1,11 @@
 .hero-container {
   position: relative;
-  width: 100%;
+  width: 99.9%;
   height: 400px;
   overflow: hidden;
+  margin-top: 78px;
+  border-radius: 50px;
+  /* border: 3px solid #e34a35; */
 }
 
 .hero-slide {

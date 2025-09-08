@@ -1,3 +1,7 @@
 .whole {
   width: 100%;
+  background-color: #e34a35;
+}
+.hero {
+  margin-top: 200px;
 }

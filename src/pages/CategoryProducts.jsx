@@ -135,7 +135,7 @@ export default function CategoryProducts() {
               <div key={p._id} className="product-card">
                 <div
                   style={{ cursor: "pointer" }}
-                  onClick={() => navigate(`/product/${p._id}`)}
+                  onClick={() => navigate(`/productDetails/${p._id}`)}
                 >
                   <img
                     src={`http://localhost:5000${p.productImage}`}

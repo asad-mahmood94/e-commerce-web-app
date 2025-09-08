@@ -1,0 +1,123 @@
+.about-container {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero .brand {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.mission-vision .box {
+  flex: 1 1 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Why Choose Us */
+.why-us {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.why-us h2 {
+  margin-bottom: 30px;
+}
+
+.why-us .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.why-us .card {
+  flex: 1 1 250px;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Team Section */
+.team {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.team .member {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.team .member img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(to right, #764ba2, #667eea);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  margin-bottom: 15px;
+}
+
+.cta button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  color: #764ba2;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta button:hover {
+  background: #f1f1f1;
+}
