@@ -342,6 +342,7 @@ export default function Header({
     { to: "/products", label: "Products" },
     { to: "/about", label: "About" },
     { to: "#", label: "Contact" },
+    { to: "/assistant", label: "Assistant" }
   ],
   showSearch = true,
   showAuthButtons = true,
@@ -392,6 +393,34 @@ export default function Header({
       <ul className="navitems">
         {links.map((link, idx) => (
           <li key={idx}>
+            {link.external ? (
+              <a
+                href={link.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn nav-btn"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link to={link.to} className="btn nav-btn">
+                {link.label}
+              </Link>
+            )}
+          </li>
+        ))}
+        {user?.isAdmin && (
+          <li>
+            <Link to="/sellerCenter" className="btn nav-btn">Admin Panel</Link>
+          </li>
+        )}
+      </ul>
+
+
+
+      {/* <ul className="navitems">
+        {links.map((link, idx) => (
+          <li key={idx}>
             <Link to={link.to} className="btn nav-btn">
               {link.label}
             </Link>
@@ -402,11 +431,11 @@ export default function Header({
             <Link to="/sellerCenter" className="btn nav-btn">Admin Panel</Link>
           </li>
         )}
-      </ul>
+      </ul> */}
 
       {/* 🔍 Search Bar */}
       {showSearch && (
-        <div className="search-bar-container" style={{ position: "relative"}}>
+        <div className="search-bar-container" style={{ position: "relative" }}>
           <div className="search-bar">
             <input
               type="text"

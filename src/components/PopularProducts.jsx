@@ -204,7 +204,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useCart } from "../context/CartContext";
 
-function ProductCard({ id, image, name, description, onAddToCart }) {
+function ProductCard({ id, image, name, description, onAddToCart, price }) {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
@@ -225,6 +225,7 @@ function ProductCard({ id, image, name, description, onAddToCart }) {
       />
       <h3>{name}</h3>
       <p>{description}</p>
+      <h3>Price: ${price}</h3>
       {/* stop propagation so button doesn’t trigger card click */}
       <button
         onClick={(e) => {
@@ -302,6 +303,7 @@ const PopularProducts = () => {
             image={product.productImage}
             name={product.name}
             description={product.description}
+            price={product.price}
             onAddToCart={() => handleAddToCart(product._id)}
           />
         ))}

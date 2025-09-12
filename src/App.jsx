@@ -137,6 +137,7 @@ import Order from "./pages/Order.jsx";
 import Messages from "./pages/Messages.jsx";
 import Products from "./pages/Products.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
+import Assistant from "./pages/Assiatant.jsx";
 
 
 export default function App() {
@@ -193,6 +194,7 @@ export default function App() {
         <Route path="/messages" element={<Messages />} />
         <Route path="/products" element={<Products />} />
         <Route path="/about"    element={<AboutUs />} />
+        <Route path="/assistant" element={<Assistant />} />
         
       </Routes>
     </BrowserRouter>
